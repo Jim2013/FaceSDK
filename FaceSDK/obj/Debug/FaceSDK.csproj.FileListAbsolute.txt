@@ -1,0 +1,15 @@
+c:\users\we\documents\visual studio 2013\Projects\FaceSDK\FaceSDK\obj\Debug\FaceSDK.csprojResolveAssemblyReference.cache
+C:\Users\we\Documents\Visual Studio 2013\Projects\FaceSDK\FaceSDK\bin\Debug\FaceSDK.dll
+C:\Users\we\Documents\Visual Studio 2013\Projects\FaceSDK\FaceSDK\bin\Debug\FaceSDK.pdb
+C:\Users\we\Documents\Visual Studio 2013\Projects\FaceSDK\FaceSDK\obj\Debug\FaceSDK.dll
+C:\Users\we\Documents\Visual Studio 2013\Projects\FaceSDK\FaceSDK\obj\Debug\FaceSDK.pdb
+C:\Users\we\Documents\GitHub\FacePlusPlusSDK\FaceSDK\bin\Debug\FaceSDK.dll
+C:\Users\we\Documents\GitHub\FacePlusPlusSDK\FaceSDK\bin\Debug\FaceSDK.pdb
+C:\Users\we\Documents\GitHub\FacePlusPlusSDK\FaceSDK\obj\Debug\FaceSDK.csprojResolveAssemblyReference.cache
+C:\Users\we\Documents\GitHub\FacePlusPlusSDK\FaceSDK\obj\Debug\FaceSDK.dll
+C:\Users\we\Documents\GitHub\FacePlusPlusSDK\FaceSDK\obj\Debug\FaceSDK.pdb
+C:\Users\we\Documents\GitHub\FaceSDK\FaceSDK\bin\Debug\FaceSDK.dll
+C:\Users\we\Documents\GitHub\FaceSDK\FaceSDK\bin\Debug\FaceSDK.pdb
+C:\Users\we\Documents\GitHub\FaceSDK\FaceSDK\obj\Debug\FaceSDK.csprojResolveAssemblyReference.cache
+C:\Users\we\Documents\GitHub\FaceSDK\FaceSDK\obj\Debug\FaceSDK.dll
+C:\Users\we\Documents\GitHub\FaceSDK\FaceSDK\obj\Debug\FaceSDK.pdb
