@@ -125,7 +125,7 @@ namespace FaceSDK
 
     public class GetFaceResponse
     {
-        public IList<SessionResult> face_info { get; set; }
+        public IList<DetectResponse> face_info { get; set; }
     }
 
     public class GetPersonListResponse
@@ -143,7 +143,32 @@ namespace FaceSDK
         public IList<Group> faceset { get; set; }
     }
 
-    public class GetSessionResponse
+    public class DetectionSessionResponse : Session
+    {
+        public DetectResponse result { get; set; }
+    }
+
+    public class CompareSessionResponse : Session
+    {
+        public CompareResponse result { get; set; }
+    }
+
+    public class VerifySessionResponse : Session
+    {
+        public VerifyResponse result { get; set; }
+    }
+
+    public class SearchSessionResponse : Session
+    {
+        public SearchResponse result { get; set; }
+    }
+
+    public class IdentifySessionResponse : Session
+    {
+        public IdentifyResponse result { get; set; }
+    }
+
+    public class Session
     {
         public string create_time { get; set; }
 
@@ -152,8 +177,6 @@ namespace FaceSDK
         public string session_id { get; set; }
 
         public string status { get; set; }
-
-        public SessionResult result { get; set; }
     }
 
     public class GetAppResponse
@@ -161,15 +184,6 @@ namespace FaceSDK
         public string name { get; set; }
 
         public string description { get; set; }
-    }
-
-    public class SessionResult : Image
-    {
-        public int img_width { get; set; }
-
-        public int img_height { get; set; }
-
-        public IList<DetectFace> face { get; set; }
     }
 
     public class FaceInfo : Face
@@ -183,8 +197,6 @@ namespace FaceSDK
         public Position position { get; set; }
 
         public string img_id { get; set; }
-
-        public string tag { get; set; }
     }
 
     public class LandmarkResult

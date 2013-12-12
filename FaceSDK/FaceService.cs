@@ -26,7 +26,7 @@ namespace FaceSDK
         /// <param name="url">待检测图片的URL</param>
         /// <param name="mode">检测模式可以是normal(默认) 或者 oneface 。在oneface模式中，检测器仅找出图片中最大的一张脸。</param>
         /// <param name="attribute">可以是none或者由逗号分割的属性列表。默认为gender, age, race, smiling。目前支持的属性包括：gender, age, race, smiling, glass, pose</param>
-        /// <param name="tag">可以为图片中检测出的每一张Face指定一个不包含^@,&=*'"等非法字符且不超过255字节的字符串作为tag，tag信息可以通过 /info/get_face 查询</param>
+        /// <param name="tag">可以为图片中检测出的每一张Face指定一个不包含非法字符且不超过255字节的字符串作为tag，tag信息可以通过 /info/get_face 查询</param>
         /// <returns></returns>
         public DetectResponse Detection_Detect(string url, string mode = "", string attribute = "", string tag = "")
         {
@@ -46,7 +46,7 @@ namespace FaceSDK
         /// <param name="bt">给定图片的二进制数据</param>
         /// <param name="mode">检测模式可以是normal(默认) 或者 oneface 。在oneface模式中，检测器仅找出图片中最大的一张脸。</param>
         /// <param name="attribute">可以是none或者由逗号分割的属性列表。默认为gender, age, race, smiling。目前支持的属性包括：gender, age, race, smiling, glass, pose</param>
-        /// <param name="tag">可以为图片中检测出的每一张Face指定一个不包含^@,&=*'"等非法字符且不超过255字节的字符串作为tag，tag信息可以通过 /info/get_face 查询</param>
+        /// <param name="tag">可以为图片中检测出的每一张Face指定一个不包含非法字符且不超过255字节的字符串作为tag，tag信息可以通过 /info/get_face 查询</param>
         /// <returns></returns>
         public DetectResponse Detection_DetectWithByte(byte[] bt, string mode = "", string attribute = "", string tag = "")
         {
@@ -63,7 +63,7 @@ namespace FaceSDK
         /// <param name="url">待检测图片的URL</param>
         /// <param name="mode">检测模式可以是normal(默认) 或者 oneface 。在oneface模式中，检测器仅找出图片中最大的一张脸。</param>
         /// <param name="attribute">可以是none或者由逗号分割的属性列表。默认为gender, age, race, smiling。目前支持的属性包括：gender, age, race, smiling, glass, pose</param>
-        /// <param name="tag">可以为图片中检测出的每一张Face指定一个不包含^@,&=*'"等非法字符且不超过255字节的字符串作为tag，tag信息可以通过 /info/get_face 查询</param>
+        /// <param name="tag">可以为图片中检测出的每一张Face指定一个不包含非法字符且不超过255字节的字符串作为tag，tag信息可以通过 /info/get_face 查询</param>
         /// <returns>session_id</returns>
         public AsyncResponse Detection_AsyncDetect(string url, string mode = "", string attribute = "", string tag = "")
         {
@@ -84,7 +84,7 @@ namespace FaceSDK
         /// <param name="bt">给定图片的二进制数据</param>
         /// <param name="mode">检测模式可以是normal(默认) 或者 oneface 。在oneface模式中，检测器仅找出图片中最大的一张脸。</param>
         /// <param name="attribute">可以是none或者由逗号分割的属性列表。默认为gender, age, race, smiling。目前支持的属性包括：gender, age, race, smiling, glass, pose</param>
-        /// <param name="tag">可以为图片中检测出的每一张Face指定一个不包含^@,&=*'"等非法字符且不超过255字节的字符串作为tag，tag信息可以通过 /info/get_face 查询</param>
+        /// <param name="tag">可以为图片中检测出的每一张Face指定一个不包含非法字符且不超过255字节的字符串作为tag，tag信息可以通过 /info/get_face 查询</param>
         /// <returns>session_id</returns>
         public AsyncResponse Detection_AsyncDetectWithByte(byte[] bt, string mode = "", string attribute = "", string tag = "")
         {
@@ -586,9 +586,9 @@ namespace FaceSDK
         /// <summary>
         /// 创建一个Person,一个Person最多允许包含10000个Face。
         /// </summary>
-        /// <param name="person_name">Person的Name信息，必须在App中全局唯一。Name不能包含^@,&=*'"等非法字符，且长度不得超过255。Name也可以不指定，此时系统将产生一个随机的name。</param>
+        /// <param name="person_name">Person的Name信息，必须在App中全局唯一。Name不能包含非法字符，且长度不得超过255。Name也可以不指定，此时系统将产生一个随机的name。</param>
         /// <param name="face_id">一组用逗号分隔的face_id, 表示将这些Face加入到该Person中</param>
-        /// <param name="tag">Person相关的tag，不需要全局唯一，不能包含^@,&=*'"等非法字符，长度不能超过255。</param>
+        /// <param name="tag">Person相关的tag，不需要全局唯一，不能包含非法字符，长度不能超过255。</param>
         /// <param name="group_id">一组用逗号分割的group id列表。如果该参数被指定，该Person被create之后就会被加入到这些组中。</param>
         /// <param name="group_name">一组用逗号分割的group name列表。如果该参数被指定，该Person被create之后就会被加入到这些组中。</param>
         /// <returns></returns>
@@ -767,9 +767,9 @@ namespace FaceSDK
         /// <summary>
         /// 创建一个Faceset, 一个Faceset最多允许包含10000个Face。
         /// </summary>
-        /// <param name="faceset_name">Faceset的Name信息，必须在App中全局唯一。Name不能包含^@,&=*'"等非法字符，且长度不得超过255。Name也可以不指定，此时系统将产生一个随机的name。</param>
+        /// <param name="faceset_name">Faceset的Name信息，必须在App中全局唯一。Name不能包含非法字符，且长度不得超过255。Name也可以不指定，此时系统将产生一个随机的name。</param>
         /// <param name="face_id">一组用逗号分隔的face_id, 表示将这些Face加入到该Faceset中</param>
-        /// <param name="tag">Faceset相关的tag，不需要全局唯一，不能包含^@,&=*'"等非法字符，长度不能超过255。</param>
+        /// <param name="tag">Faceset相关的tag，不需要全局唯一，不能包含非法字符，长度不能超过255。</param>
         /// <returns></returns>
         public CreatePersonResponse FaceSet_Create(string faceset_name = "", string face_id = "", string tag = "")
         {
@@ -943,9 +943,9 @@ namespace FaceSDK
         /// <summary>
         /// 创建一个Group, 一个Group最多允许包含10000个Person。
         /// </summary>
-        /// <param name="group_name">Group的Name信息，必须在App中全局唯一。Name不能包含^@,&=*'"等非法字符，且长度不得超过255。Name也可以不指定，此时系统将产生一个随机的name。</param>
+        /// <param name="group_name">Group的Name信息，必须在App中全局唯一。Name不能包含非法字符，且长度不得超过255。Name也可以不指定，此时系统将产生一个随机的name。</param>
         /// <param name="person_id">一组用逗号分隔的person_id或person_name, 表示将这些Person加入到该Group中。注意，一个Person可以被加入到多个Group中。</param>
-        /// <param name="tag">Group的tag，不需要全局唯一，不能包含^@,&=*'"等非法字符，长度不能超过255。</param>
+        /// <param name="tag">Group的tag，不需要全局唯一，不能包含非法字符，长度不能超过255。</param>
         /// <returns></returns>
         public CreatePersonResponse Group_Create(string group_name = "", string person_id = "", string tag = "")
         {
@@ -1249,14 +1249,89 @@ namespace FaceSDK
         /// </summary>
         /// <param name="session_id">由/detection或/recognition中的API调用产生的session_id</param>
         /// <returns></returns>
-        public GetSessionResponse Info_GetSession(string session_id)
+        public Session Info_GetSession(string session_id)
         {
             var dictionary = new Dictionary<object, object>
             {
                 {"session_id", session_id}
             };
 
-            return HttpGet<GetSessionResponse>("/info/get_session", dictionary);
+            return HttpGet<Session>("/info/get_session", dictionary);
+        }
+
+        /// <summary>
+        /// 获取DetectionSession相关状态和结果。可能的status：INQUEUE(队列中), SUCC(成功) 和FAILED(失败)。当status是SUCC时，返回结果中还包含session对应的结果。
+        /// </summary>
+        /// <param name="session_id">由/detection或/recognition中的API调用产生的session_id</param>
+        /// <returns></returns>
+        public DetectionSessionResponse Info_GetDetectionSession(string session_id)
+        {
+            var dictionary = new Dictionary<object, object>
+            {
+                {"session_id", session_id}
+            };
+
+            return HttpGet<DetectionSessionResponse>("/info/get_session", dictionary);
+        }
+
+        /// <summary>
+        /// 获取CompareSession相关状态和结果。可能的status：INQUEUE(队列中), SUCC(成功) 和FAILED(失败)。当status是SUCC时，返回结果中还包含session对应的结果。
+        /// </summary>
+        /// <param name="session_id">由/detection或/recognition中的API调用产生的session_id</param>
+        /// <returns></returns>
+        public CompareSessionResponse Info_GetCompareSession(string session_id)
+        {
+            var dictionary = new Dictionary<object, object>
+            {
+                {"session_id", session_id}
+            };
+
+            return HttpGet<CompareSessionResponse>("/info/get_session", dictionary);
+        }
+
+        /// <summary>
+        /// 获取VerifySession相关状态和结果。可能的status：INQUEUE(队列中), SUCC(成功) 和FAILED(失败)。当status是SUCC时，返回结果中还包含session对应的结果。
+        /// </summary>
+        /// <param name="session_id">由/detection或/recognition中的API调用产生的session_id</param>
+        /// <returns></returns>
+        public VerifySessionResponse Info_GetVerifySession(string session_id)
+        {
+            var dictionary = new Dictionary<object, object>
+            {
+                {"session_id", session_id}
+            };
+
+            return HttpGet<VerifySessionResponse>("/info/get_session", dictionary);
+        }
+
+        /// <summary>
+        /// 获取SearchSession相关状态和结果。可能的status：INQUEUE(队列中), SUCC(成功) 和FAILED(失败)。当status是SUCC时，返回结果中还包含session对应的结果。
+        /// </summary>
+        /// <param name="session_id">由/detection或/recognition中的API调用产生的session_id</param>
+        /// <returns></returns>
+        public SearchSessionResponse Info_GetSearchSession(string session_id)
+        {
+            var dictionary = new Dictionary<object, object>
+            {
+                {"session_id", session_id}
+            };
+
+            return HttpGet<SearchSessionResponse>("/info/get_session", dictionary);
+        }
+
+        /// <summary>
+        /// 获取IdentifySession相关状态和结果。可能的status：INQUEUE(队列中), SUCC(成功) 和FAILED(失败)。当status是SUCC时，返回结果中还包含session对应的结果。
+        /// </summary>
+        /// <param name="session_id">由/detection或/recognition中的API调用产生的session_id</param>
+        /// <returns></returns>
+        public IdentifySessionResponse Info_GetIdentifySession(string session_id)
+        {
+            var dictionary = new Dictionary<object, object>
+            {
+                {"session_id", session_id}
+            };
+
+            return HttpGet<IdentifySessionResponse>("/info/get_session", dictionary);
         }
 
         /// <summary>
